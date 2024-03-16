@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-worker_socket-7e1ab9d3-e5a2-4ead-8d4b-c94905792364</UserSecretsId>
+    <RootNamespace>worker_socket</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp.Authenticators.Digest" Version="1.6.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2-dev-00334" />
+    <PackageReference Include="Socket.Io.Client.Core" Version="1.2.0" />
+    <PackageReference Include="SocketIOClient" Version="3.1.1" />
+    <PackageReference Include="Websocket.Client" Version="5.1.1" />
+  </ItemGroup>
+</Project>
