@@ -2,10 +2,10 @@ using worker_socket;
 
 using System.Reflection;
 using Serilog;
-//System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
 //loguen en entorno produccion /Bin
-Environment.CurrentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+//Environment.CurrentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
 //serilog configuracion
 Log.Logger = new LoggerConfiguration()
