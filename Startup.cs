@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Serilog;
-using SocketIOClient;
 using worker_socket.emisores;
 using worker_socket.services;
 using worker_socket.utils;
@@ -29,7 +28,7 @@ namespace worker_socket
 
                 }
                 ServicesUtil(services);
-                ServicesSocket(services);
+                ServicesController(services);
                 /* ServicesRepository(services);
                 ServicesModules(services); */
                 Services(services);
@@ -38,22 +37,24 @@ namespace worker_socket
         public void ServicesUtil(IServiceCollection services)
         {
             //Add services
-            services.AddSingleton<Request>();
+            services.AddSingleton<ApiRest>();
+            services.AddSingleton<Jwt>();
+            
             /* services.AddSingleton<DBRallyDiciembre2023>();
             services.AddTransient<EmailHttpClient>();
             services.AddTransient<EmailRequest>(); */
         }
 
-        public void ServicesSocket(IServiceCollection services)
+        public void ServicesController(IServiceCollection services)
         {
             //Add services
-            services.AddSingleton<UsuarioSocket>();
+            services.AddSingleton<GeneralController>();
 
         }
         public void Services(IServiceCollection services)
         {
             //Add services
-            services.AddHostedService<ActualizarUsuario>();
+            services.AddHostedService<ClienteSocket>();
         }
 
         /*Modulos*/

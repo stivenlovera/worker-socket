@@ -9,17 +9,19 @@ namespace worker_socket.models
 {
     public class MessageSocket<T>
     {
-    
+
         [JsonProperty(PropertyName = "event")]
         public string Event { get; set; }
 
         [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
-        
+
         [JsonProperty(PropertyName = "channel")]
         public string Channel { get; set; }
 
         [JsonProperty(PropertyName = "data")]
         public T Data { get; set; }
+        [JsonProperty(PropertyName = "adjuntos")]
+        public object Adjuntos { get; set; }
     }
 }
